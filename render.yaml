@@ -10,9 +10,9 @@ services:
    buildCommand: "./bin/render-build.sh"
    startCommand: "bundle exec puma -C config/puma.rb"
    envVars:
-     - key: postgres://advent_of_code_2020_user:R8L72WdsWn7eNxl0EpYmeqY62Qpj70rA@dpg-c08ceilc2rvpkmnicq0g/advent_of_code_2020
+     - key: DATABASE_URL
        fromDatabase:
          name: mysite
          property: connectionString
-     - key: 824ee3eb27b44c0f6833ef9e9b122b81
+     - key: RAILS_MASTER_KEY
        sync: false
